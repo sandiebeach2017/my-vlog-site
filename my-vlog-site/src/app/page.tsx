@@ -4,27 +4,34 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* NAVIGATION BAR */}
-      <nav className="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div className="flex items-center gap-3">
-          <img src="/ichuz2blogo.png" alt="I CHUZ 2 B! Logo" className="h-10 w-10 object-contain bg-transparent" />
-          <span className="font-black text-2xl tracking-tighter text-purple-900 underline decoration-teal-400">I CHUZ 2 B</span>
-        </div>
-        <div className="space-x-6 text-sm font-medium text-slate-600">
-          <a href="/articles" className="hover:text-teal-600 transition-colors">Articles</a>
-          <a href="#" className="hover:text-teal-600">Resources</a>
-          <a href="#" className="bg-slate-900 text-white px-5 py-2 rounded-full">Subscribe</a>
+      <nav className="p-6 max-w-7xl mx-auto flex justify-between items-center">
+        <img src="/ichuz2blogo.png" alt="I CHUZ 2 B Logo" className="h-16 w-auto rounded-lg shadow-sm" />
+        <div className="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest text-purple-900">
+          <a href="/articles" className="hover:text-amber-500 transition-colors">Career</a>
+          <a href="/articles" className="hover:text-amber-500 transition-colors">Life</a>
+          <a href="/articles" className="hover:text-amber-500 transition-colors">Growth</a>
+          <a href="/about" className="hover:text-amber-500 transition-colors">About</a>
         </div>
       </nav>
 
       {/* HERO SECTION */}
-      <header className="py-24 px-6 text-center max-w-4xl mx-auto">
-        <h1 className="text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-          Caregiving. <span className="text-teal-500">Growth.</span> Career.
-        </h1>
-        <p className="text-xl text-slate-600 leading-relaxed">
-          I'm a developer building a life that balances professional ambition 
-          with the heart of caregiving. Join the journey.
-        </p>
+      <header className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Banner Image */}
+        <img 
+          src="/mybackground.jpg" 
+          alt="I CHUZ 2 B Banner" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlay to make text readable */}
+        <div className="absolute inset-0 bg-purple-900/40 backdrop-blur-[2px]"></div>
+        <div className="relative z-10 text-center px-6">
+          <h1 className="text-5xl md:text-7xl font-black text-white drop-shadow-lg mb-4">
+            I CHUZ 2 B
+          </h1>
+          <p className="text-xl md:text-2xl text-amber-200 font-medium tracking-wide uppercase">
+            Career • Life • Growth
+          </p>
+        </div>
       </header>
 
       {/* INTRO VIDEO SECTION */}
@@ -72,13 +79,14 @@ export default function Home() {
       </section>
 
       {/* RESOURCE SECTION CARD */}
-      <section className="max-w-6xl mx-auto px-6 pb-24">
-        <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Need Resources?</h2>
-          <p className="text-slate-400 mb-8 max-w-md mx-auto">I've compiled checklists, resume templates, and growth trackers just for you.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-teal-400 text-slate-900 px-8 py-3 rounded-full font-bold">Download Free Guides</button>
-          </div>
+      <section className="bg-purple-900 text-white py-16 px-6 text-center">
+        <div className="max-w-2xl mx-auto">
+          <img src="/ichuz2blogo.png" alt="Logo" className="h-20 w-auto mx-auto mb-6 rounded-full border-4 border-amber-400" />
+          <h2 className="text-3xl font-bold mb-4">Start Your Transformation</h2>
+          <p className="text-purple-200 mb-8">Download our free 'Pivoting with Purpose' guide for caregivers and career changers.</p>
+          <button className="bg-amber-400 hover:bg-amber-300 text-purple-900 font-black py-4 px-10 rounded-full transition-all uppercase tracking-widest shadow-lg">
+            Get The Resources
+          </button>
         </div>
       </section>
 
